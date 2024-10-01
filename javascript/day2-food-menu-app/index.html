@@ -3,27 +3,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Menu App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header>
-      <h1>Food Menu</h1>
+    <header class="w-full flex justify-center items-center pt-20">
+      <h1 class="text-3xl font-bold border-b-4 border-b-teal-500">Food Menu</h1>
     </header>
-    <nav>
-      <ul>
-        <li>All</li>
-        <li>Breakfast</li>
-        <li>Lunch</li>
-        <li>Shakes</li>
-        <li>Dinner</li>
+    <nav class="flex justify-center my-10">
+      <ul class="flex justify-around w-10/12 text-teal-700 font-semibold">
+        <li class="border-2 border-teal-500 py-1 px-3 cursor-pointer">All</li>
+        <li class="border-2 border-teal-500 py-1 px-3 cursor-pointer">
+          Breakfast
+        </li>
+        <li class="border-2 border-teal-500 py-1 px-3 cursor-pointer">Lunch</li>
+        <li class="border-2 border-teal-500 py-1 px-3 cursor-pointer">
+          Shakes
+        </li>
+        <li class="border-2 border-teal-500 py-1 px-3 cursor-pointer">
+          Dinner
+        </li>
       </ul>
     </nav>
-    <main>
-      <article>
-        <img />
+    <main class="grid grid-cols-2 px-10 gap-20 pb-20">
+      <article class="flex justify-between gap-5">
+        <img class="w-[300px] h-[200px]" src="./public/bread.jpg" />
         <div>
-          <div>
-            <span>음식 메뉴</span>
-            <span>가격</span>
+          <div
+            class="border-b border-b-gray-400 pb-2 mb-2 flex justify-between"
+          >
+            <span>Bread</span>
+            <span class="text-teal-700 font-semibold">5000원</span>
           </div>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -38,12 +47,14 @@
           </p>
         </div>
       </article>
-      <article>
-        <img />
+      <article class="flex justify-between gap-5">
+        <img class="w-[300px] h-[200px]" src="./public/bread.jpg" />
         <div>
-          <div>
-            <span>음식 메뉴</span>
-            <span>가격</span>
+          <div
+            class="border-b border-b-gray-400 pb-2 mb-2 flex justify-between"
+          >
+            <span>Bread</span>
+            <span class="text-teal-700 font-semibold">5000원</span>
           </div>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -58,12 +69,14 @@
           </p>
         </div>
       </article>
-      <article>
-        <img />
+      <article class="flex justify-between gap-5">
+        <img class="w-[300px] h-[200px]" src="./public/bread.jpg" />
         <div>
-          <div>
-            <span>음식 메뉴</span>
-            <span>가격</span>
+          <div
+            class="border-b border-b-gray-400 pb-2 mb-2 flex justify-between"
+          >
+            <span>Bread</span>
+            <span class="text-teal-700 font-semibold">5000원</span>
           </div>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
