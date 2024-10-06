@@ -29,3 +29,4 @@ const menus = [
 ```
 
 ## 시연 영상
+https://github.com/user-attachments/assets/fcaa02a8-4e40-43a8-a59c-305e4849cabc
