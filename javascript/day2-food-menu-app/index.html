@@ -10,87 +10,43 @@
       <h1 class="text-3xl font-bold border-b-4 border-b-teal-500">Food Menu</h1>
     </header>
     <nav class="flex justify-center my-10">
-      <ul class="flex justify-around w-10/12 text-teal-700 font-semibold">
-        <li class="border-2 border-teal-500 py-1 px-3 cursor-pointer">All</li>
-        <li class="border-2 border-teal-500 py-1 px-3 cursor-pointer">
+      <ul
+        id="menus"
+        class="flex justify-around w-10/12 text-teal-700 font-semibold"
+      >
+        <li
+          class="border-2 border-teal-500 py-1 px-3 cursor-pointer"
+          name="all"
+        >
+          All
+        </li>
+        <li
+          class="border-2 border-teal-500 py-1 px-3 cursor-pointer"
+          name="breakfast"
+        >
           Breakfast
         </li>
-        <li class="border-2 border-teal-500 py-1 px-3 cursor-pointer">Lunch</li>
-        <li class="border-2 border-teal-500 py-1 px-3 cursor-pointer">
+        <li
+          class="border-2 border-teal-500 py-1 px-3 cursor-pointer"
+          name="lunch"
+        >
+          Lunch
+        </li>
+        <li
+          class="border-2 border-teal-500 py-1 px-3 cursor-pointer"
+          name="shakes"
+        >
           Shakes
         </li>
-        <li class="border-2 border-teal-500 py-1 px-3 cursor-pointer">
+        <li
+          class="border-2 border-teal-500 py-1 px-3 cursor-pointer"
+          name="dinner"
+        >
           Dinner
         </li>
       </ul>
     </nav>
-    <main class="grid grid-cols-2 px-10 gap-20 pb-20">
-      <article class="flex justify-between gap-5">
-        <img class="w-[300px] h-[200px]" src="./public/bread.jpg" />
-        <div>
-          <div
-            class="border-b border-b-gray-400 pb-2 mb-2 flex justify-between"
-          >
-            <span>Bread</span>
-            <span class="text-teal-700 font-semibold">5000원</span>
-          </div>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
-        </div>
-      </article>
-      <article class="flex justify-between gap-5">
-        <img class="w-[300px] h-[200px]" src="./public/bread.jpg" />
-        <div>
-          <div
-            class="border-b border-b-gray-400 pb-2 mb-2 flex justify-between"
-          >
-            <span>Bread</span>
-            <span class="text-teal-700 font-semibold">5000원</span>
-          </div>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
-        </div>
-      </article>
-      <article class="flex justify-between gap-5">
-        <img class="w-[300px] h-[200px]" src="./public/bread.jpg" />
-        <div>
-          <div
-            class="border-b border-b-gray-400 pb-2 mb-2 flex justify-between"
-          >
-            <span>Bread</span>
-            <span class="text-teal-700 font-semibold">5000원</span>
-          </div>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
-        </div>
-      </article>
-    </main>
+    <main id="main" class="grid grid-cols-2 px-10 gap-20 pb-20"></main>
+    <script src="./index.js"></script>
   </body>
 </html>
