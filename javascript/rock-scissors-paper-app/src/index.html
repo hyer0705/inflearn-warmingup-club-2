@@ -7,6 +7,60 @@
     <link href="./output.css" rel="stylesheet" />
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <main
+      class="bg-pink-300 w-screen h-screen flex flex-col justify-center items-center gap-8 text-white"
+    >
+      <h1 class="text-5xl font-bold">가위 바위 보</h1>
+      <div class="flex gap-24">
+        <div class="flex flex-col items-center font-semibold gap-1">
+          <span class="text-xl">플레이어</span>
+          <span id="player-score">0</span>
+        </div>
+        <div class="flex flex-col items-center font-semibold gap-1">
+          <span class="text-xl">컴퓨터</span>
+          <span id="computer-score">0</span>
+        </div>
+      </div>
+      <!-- 게임 결과 보기 전 -->
+      <div id="game-play" class="flex flex-col items-center w-10/12 gap-4">
+        <div class="flex flex-col gap-2 items-center">
+          <h3 class="text-2xl font-bold">선택하기</h3>
+          <span class="text-sm">남은 횟수: 10</span>
+        </div>
+        <div class="w-full flex justify-around">
+          <button
+            id="scissors"
+            class="bg-gray-300 hover:bg-gray-400 active:bg-gray-500 py-2 px-6 rounded-md text-black text-sm"
+          >
+            가위
+          </button>
+          <button
+            id="rock"
+            class="bg-gray-300 hover:bg-gray-400 active:bg-gray-500 py-2 px-6 rounded-md text-black text-sm"
+          >
+            바위
+          </button>
+          <button
+            id="paper"
+            class="bg-gray-300 hover:bg-gray-400 active:bg-gray-500 py-2 px-6 rounded-md text-black text-sm"
+          >
+            보
+          </button>
+        </div>
+        <h5 class="text-sm">게임 결과</h5>
+      </div>
+      <!-- 게임 결과 보기 후 -->
+      <div id="game-result" class="hidden">
+        <!-- <div id="game-result" class="hidden flex flex-col items-center gap-4"> -->
+        <h3 class="text-2xl font-bold">게임 종료!</h3>
+        <h4 class="text-3xl font-bold text-red-500">게임 결과</h4>
+        <button
+          id="restart"
+          class="bg-gray-300 hover:bg-gray-400 active:bg-gray-500 py-2 px-6 rounded-md text-black text-sm"
+        >
+          다시 시작
+        </button>
+      </div>
+    </main>
   </body>
 </html>
