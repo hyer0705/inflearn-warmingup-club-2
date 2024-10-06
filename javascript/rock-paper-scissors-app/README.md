@@ -6,7 +6,8 @@
 
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/taiwilwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white">
 
-## 시연 영상
+## 데모
+![2024-10-069 08 40-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/95c300bc-ca75-458a-8906-9c2a5e863e10)
 
 ## 주요 기능
 
