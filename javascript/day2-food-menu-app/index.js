@@ -45,29 +45,22 @@ function menuClickHandler(menus, name) {
   resetMainContainer();
   switch (selectedCategory) {
     case "all":
-      menus.map((menu) => FoodComponent(menu));
+      renderFoodMenus(menus);
       break;
     case "breakfast":
-      menus
-        .filter(({ category }) => category === selectedCategory)
-        .map((menu) => FoodComponent(menu));
-      break;
     case "lunch":
-      menus
-        .filter(({ category }) => category === selectedCategory)
-        .map((menu) => FoodComponent(menu));
-      break;
     case "shakes":
-      menus
-        .filter(({ category }) => category === selectedCategory)
-        .map((menu) => FoodComponent(menu));
-      break;
     case "dinner":
-      menus
-        .filter(({ category }) => category === selectedCategory)
-        .map((menu) => FoodComponent(menu));
+      renderFoodMenus(
+        menus.filter(({ category }) => category === selectedCategory)
+      );
       break;
   }
+}
+
+function renderFoodMenus(menus) {
+  console.log();
+  menus.map((menu) => FoodComponent(menu)); // 초기 메뉴 설정
 }
 
 window.onload = function () {
@@ -144,7 +137,7 @@ window.onload = function () {
     },
   ];
 
-  menus.map((menu) => FoodComponent(menu)); // 초기 메뉴 설정
+  renderFoodMenus(menus);
 
   const menuUL = document.getElementById("menus");
   menuUL.addEventListener("click", (e) =>
