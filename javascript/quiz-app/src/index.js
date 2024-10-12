@@ -8,6 +8,12 @@ function removeBgClass(el) {
   removedClassList.forEach((cl) => el.classList.remove(cl));
 }
 
+function resetBg() {
+  const bg = document.querySelector("main");
+  removeBgClass(bg);
+
+  bg.classList.add("bg-gray-400");
+}
 function renderBg(isAnswer) {
   const bg = document.querySelector("main");
   removeBgClass(bg);
@@ -43,18 +49,18 @@ function renderNextBtns(questions, quiz) {
   const copied = [...questions].sort((a, b) => b.id - a.id);
   const lastQuizId = copied[0].id;
 
-  btn.onclick = null;
-
   if (quiz.getQuizId() >= lastQuizId) {
     btn.innerText = "Reset";
     btn.onclick = () => {
       quiz.reset();
+      resetBg();
       renderQuiz(questions, quiz);
     };
   } else {
     btn.innerText = "Next";
     btn.onclick = () => {
       quiz.increment();
+      resetBg();
       renderQuiz(questions, quiz);
     };
   }
@@ -67,7 +73,8 @@ function renderQuiz(questions, quiz) {
 
   const choices = document.getElementById("choices");
   choices.innerHTML = "";
-  choices.addEventListener("click", (e) => {
+
+  const handleChoicesClick = (e) => {
     const selected = e.target.value;
 
     if (!selected) return;
@@ -81,7 +88,9 @@ function renderQuiz(questions, quiz) {
 
     // Next or Restart button rendering
     renderNextBtns(questions, quiz);
-  });
+  };
+
+  choices.onclick = handleChoicesClick;
 
   const question = document.getElementById("question");
   question.innerText = currQuiz.question;
