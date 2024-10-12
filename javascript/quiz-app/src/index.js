@@ -35,8 +35,35 @@ function renderChoices(answer) {
   });
 }
 
-function renderQuiz(questions, id) {
-  const currQuiz = questions.find((question) => question.id === id);
+function renderNextBtns(questions, quiz) {
+  const nextBtns = document.getElementById("next-btns");
+  nextBtns.className = "text-white flex justify-center items-center";
+  const btn = nextBtns.querySelector("button");
+
+  const copied = [...questions].sort((a, b) => b.id - a.id);
+  const lastQuizId = copied[0].id;
+
+  btn.onclick = null;
+
+  if (quiz.getQuizId() >= lastQuizId) {
+    btn.innerText = "Reset";
+    btn.onclick = () => {
+      quiz.reset();
+      renderQuiz(questions, quiz);
+    };
+  } else {
+    btn.innerText = "Next";
+    btn.onclick = () => {
+      quiz.increment();
+      renderQuiz(questions, quiz);
+    };
+  }
+}
+
+function renderQuiz(questions, quiz) {
+  const currQuiz = questions.find(
+    (question) => question.id === quiz.getQuizId()
+  );
 
   const choices = document.getElementById("choices");
   choices.innerHTML = "";
@@ -53,6 +80,7 @@ function renderQuiz(questions, id) {
     renderChoices(currQuiz.answer);
 
     // Next or Restart button rendering
+    renderNextBtns(questions, quiz);
   });
 
   const question = document.getElementById("question");
@@ -94,6 +122,14 @@ window.onload = function () {
   // choices를 누르면 결과가 나옴 => 바탕색 틀리면 빨강, 맞으면 초록, 버튼 색은 정답에만 초록 나머지는 빨강
   // choices를 누르면 Next or Restart 버튼이 나옴
 
-  let currQuizId = 1;
-  renderQuiz(questions, currQuizId);
+  const quiz = (function () {
+    let quizId = 1;
+    return {
+      getQuizId: () => quizId,
+      increment: () => quizId++,
+      reset: () => (quizId = 1),
+    };
+  })();
+
+  renderQuiz(questions, quiz);
 };
