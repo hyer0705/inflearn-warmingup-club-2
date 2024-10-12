@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="w-screen h-screen bg-gray-400 flex justify-center">
+      <article
+        class="bg-white w-11/12 m-auto p-4 rounded-md flex flex-col gap-8"
+      >
+        <h3 class="text-xl">3 + 3?</h3>
+        <div class="text-white font-semibold grid grid-cols-2 gap-3">
+          <button
+            class="bg-gray-400 rounded-md py-1 hover:bg-gray-500 active:bg-gray-600"
+          >
+            4
+          </button>
+          <button
+            class="bg-gray-400 rounded-md py-1 hover:bg-gray-500 active:bg-gray-600"
+          >
+            3
+          </button>
+          <button
+            class="bg-gray-400 rounded-md py-1 hover:bg-gray-500 active:bg-gray-600"
+          >
+            정답이 없습니다.
+          </button>
+        </div>
+        <div class="text-white flex justify-center items-center">
+          <button
+            class="bg-gray-400 text-2xl py-2 px-5 rounded-md hover:bg-gray-500 active:bg-gray-600"
+          >
+            Next
+          </button>
+          <button
+            class="bg-gray-400 text-2xl py-2 px-5 rounded-md hidden hover:bg-gray-500 active:bg-gray-600"
+          >
+            Restart
+          </button>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
