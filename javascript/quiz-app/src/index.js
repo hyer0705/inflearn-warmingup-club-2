@@ -54,6 +54,8 @@ function renderNextBtns(questions, quiz) {
     btn.onclick = () => {
       quiz.reset();
       resetBg();
+      nextBtns.className = "hidden";
+
       renderQuiz(questions, quiz);
     };
   } else {
@@ -61,6 +63,8 @@ function renderNextBtns(questions, quiz) {
     btn.onclick = () => {
       quiz.increment();
       resetBg();
+      nextBtns.className = "hidden";
+
       renderQuiz(questions, quiz);
     };
   }
